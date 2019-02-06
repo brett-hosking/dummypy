@@ -2,7 +2,7 @@
 A package dummy template for Python 
 
 
-## How to install virtualenv:
+## Install and setup virtualenv:
 
 ### Install **pip** first
 
@@ -12,7 +12,6 @@ A package dummy template for Python
 
     sudo pip3 install virtualenv 
 
-
 ### Create virtualenv using Python3
     virtualenv -p python3 myenv
 
@@ -20,6 +19,12 @@ A package dummy template for Python
     python3 -m venv myenv
 
 >you can use any name insted of **myenv**
+
+## Activate virtual environment
+
+    python3 -m venv myenv
+
+>the environment can be deactivated with the ** deactivate** command
 
 ## Install Package
 
@@ -35,10 +40,43 @@ A package dummy template for Python
     git pull
     pip install . --upgrade
 
-
-## Notes 
+## Notes for building packages
 
 ### Create a requirements.txt file in the format:
     feedparser==5.1.3
     wsgiref==0.1.2
     django==1.4.2
+
+
+## Useful commands 
+
+### List Python packages
+    pip list
+
+
+## Creating Documentation 
+
+### install sphinx 
+    pip install sphinx 
+    pip install sphinx_rtd_theme
+
+### setup docs 
+    mkdir docs 
+    cd docs
+    sphinx-quickstart
+
+### Edit and Make
+    edit source/conf.py -> html_theme = "sphinx_rtd_theme"; html_theme_path = ["_themes", ]
+    make html
+
+### Upload docs 
+Go to https://readthedocs.org
+Login using github and create service hook
+Go to import and add repository details 
+
+    cd docs 
+    make clean 
+    cd ../
+    git add docs 
+    git commit -am 'added docs'
+    push
