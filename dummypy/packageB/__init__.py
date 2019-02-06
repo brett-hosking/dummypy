@@ -1,1 +1,2 @@
-# Package B init
+# Nested package modules
+from . import Btest
