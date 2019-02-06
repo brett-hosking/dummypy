@@ -1,5 +1,4 @@
-# dummypy
-A package dummy template for Python 
+# A dummy package template for Python 
 
 
 ## Install and setup virtualenv:
@@ -24,7 +23,7 @@ A package dummy template for Python
 
     python3 -m venv myenv
 
->the environment can be deactivated with the ** deactivate** command
+>the environment can be deactivated with the **deactivate** command
 
 ## Install Package
 
